@@ -17,18 +17,11 @@ spec:
       containers:
         - name: boinc-client
           image: docker.io/boinc/client:arm64v8
-          command: ["start-boinc.sh"]
-          args:
-            [
-              "--attach_project",
-              "http://setiathome.berkeley.edu",
-              "9273669_da0dfa55f2fa0c4d6c5c06a64867d614",
-            ]
           ports:
             - containerPort: 31416
           env:
             - name: BOINC_CMD_LINE_OPTIONS
-              value: "--allow_remote_gui_rpc"
+              value: "--allow_remote_gui_rpc --attach_project http://setiathome.berkeley.edu 9273669_da0dfa55f2fa0c4d6c5c06a64867d614"
             - name: BOINC_GUI_RPC_PASSWORD
               value: "password"
           volumeMounts:
