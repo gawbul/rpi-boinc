@@ -21,7 +21,7 @@ spec:
             - containerPort: 31416
           env:
             - name: BOINC_CMD_LINE_OPTIONS
-              value: "--allow_remote_gui_rpc --attach_project http://setiathome.berkeley.edu 9273669_da0dfa55f2fa0c4d6c5c06a64867d614"
+              value: "--allow_remote_gui_rpc --attach_project www.worldcommunitygrid.org 1174829_e84b2199500953f7958328d5e36d83dd"
             - name: BOINC_GUI_RPC_PASSWORD
               value: "password"
           volumeMounts:
