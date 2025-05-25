@@ -2,7 +2,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: rpi-boinc
+  name: rpi-boinc-service
   namespace: default
 spec:
   selector:
