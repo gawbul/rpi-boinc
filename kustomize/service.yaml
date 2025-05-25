@@ -1,0 +1,14 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: rpi-boinc
+  namespace: default
+spec:
+  selector:
+    deployment: rpi-boinc
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 31416
+      targetPort: 31416
