@@ -7,8 +7,9 @@ metadata:
 spec:
   selector:
     deployment: rpi-boinc
-  type: ClusterIP
+  type: NodePort
   ports:
     - protocol: TCP
       port: 31416
       targetPort: 31416
+      nodePort: 30007
