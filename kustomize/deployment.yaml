@@ -14,6 +14,16 @@ spec:
       labels:
         deployment: rpi-boinc
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: deployment
+                    operator: In
+                    values:
+                      - rpi-boinc
+              topologyKey: kubernetes.io/hostname
       containers:
         - name: boinc-client
           image: docker.io/boinc/client:arm64v8
