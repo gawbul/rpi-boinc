@@ -26,7 +26,7 @@ spec:
                   name: rpi-boinc-secret
                   key: account-key
             - name: BOINC_CMD_LINE_OPTIONS
-              value: "--allow_remote_gui_rpc --attach_project https://boinc.bakerlab.org/rosetta ${BOINC_ACCOUNT_KEY}"
+              value: "--allow_remote_gui_rpc --attach_project https://boinc.bakerlab.org/rosetta $BOINC_ACCOUNT_KEY"
             - name: BOINC_GUI_RPC_PASSWORD
               value: "password"
           resources:
