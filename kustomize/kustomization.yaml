@@ -7,5 +7,6 @@ metadata:
 commonLabels:
   app: rpi-boinc
 resources:
+  - secret.yaml
   - deployment.yaml
   - service.yaml

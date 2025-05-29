@@ -20,8 +20,13 @@ spec:
           ports:
             - containerPort: 31416
           env:
+            - name: BOINC_ACCOUNT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: rpi-boinc-secret
+                  key: account-key
             - name: BOINC_CMD_LINE_OPTIONS
-              value: "--allow_remote_gui_rpc --attach_project https://boinc.bakerlab.org/rosetta 2425531_4bd35982e28034772b2fd36a926f9d01"
+              value: "--allow_remote_gui_rpc --attach_project https://boinc.bakerlab.org/rosetta ${BOINC_ACCOUNT_KEY}"
             - name: BOINC_GUI_RPC_PASSWORD
               value: "password"
           resources:
