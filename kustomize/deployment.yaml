@@ -41,10 +41,11 @@ spec:
               value: "password"
           resources:
             requests:
-              cpu: "1000m"
+              cpu: "500m"
               memory: "512Mi"
             limits:
-              memory: "2048Mi"
+              cpu: "1000m"
+              memory: "1024Mi"
           volumeMounts:
             - name: boinc-data
               mountPath: /var/lib/boinc
