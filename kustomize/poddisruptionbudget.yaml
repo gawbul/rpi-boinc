@@ -1,0 +1,9 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: rpi-boinc-pdb
+spec:
+  maxUnavailable: 1
+  selector:
+    matchLabels:
+      deployment: rpi-boinc
